@@ -142,7 +142,7 @@ plt.ylabel("time in microseconds")
 plt.fill_between(x,y,color="skyblue",alpha=0.4)
 plt.plot(x,y,color="lime",alpha=0.2)
 plt.plot(x,y,"go")
-plt.savefig('plot.png')
+plt.savefig('plots/plot.png')
 e=tm.perf_counter_ns()
 r=(e-s)/10**9
 print(f'The program took {r:.9f} seconds')

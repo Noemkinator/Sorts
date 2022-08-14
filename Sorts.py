@@ -123,26 +123,18 @@ def insertsort(arr):
 def bogosort(arr):
     while not isSorted(arr):
         rnd.shuffle(arr)
-        
-#main code
-n=int(input())
-s=tm.perf_counter_ns()
-bubblesort(randarr(n))
-insertsort(randarr(n))
-mergesort(randarr(n))
-quicksort(randarr(n),0,n-1)
-shellsort(randarr(n))
-#bogosort(randarr(n))
 
-x=list(results.keys())
-y=list(results.values())
-plt.figure(dpi=1200)
-plt.style.use('seaborn-darkgrid')
-plt.ylabel("time in microseconds")
-plt.fill_between(x,y,color="skyblue",alpha=0.4)
-plt.plot(x,y,color="lime",alpha=0.2)
-plt.plot(x,y,"go")
-plt.savefig('plots/plot.png')
-e=tm.perf_counter_ns()
-r=(e-s)/10**9
-print(f'The program took {r:.9f} seconds')
+#main function for rendering graph
+def sorts():
+    x=list(results.keys())
+    y=list(results.values())
+    plt.figure(dpi=1200)
+    plt.style.use('seaborn-darkgrid')
+    plt.ylabel("time in microseconds")
+    plt.fill_between(x,y,color="skyblue",alpha=0.4)
+    plt.plot(x,y,color="lime",alpha=0.2)
+    plt.plot(x,y,"go")
+    plt.savefig('plots/plot.png')
+    e=tm.perf_counter_ns()
+    r=(e-start)/10**9
+    print(f'The program took {r:.9f} seconds')

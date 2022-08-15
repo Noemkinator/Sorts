@@ -22,7 +22,7 @@ def plotdata():
     
 root = tk.Tk()
 root.title("Sorting Algorithms")
-root.iconbitmap('lib/icon.ico')
+root.iconbitmap('src/icon.ico')
 canvas = tk.Canvas(root, height=400, 
                    width=600, 
                    bg="#333533", 

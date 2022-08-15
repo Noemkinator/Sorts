@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 from functools import wraps
 import time as tm
 import random as rnd
-from globals import *
 
 global results
 results = {}

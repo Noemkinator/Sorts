@@ -23,7 +23,10 @@ def plotdata():
     shellsort(randarr(n))
     radixsort(randarr(n))
     sorts()
-    my_img=ImageTk.PhotoImage(Image.open('plots/plot.png').resize((1520,880)))
+    try:
+        my_img=ImageTk.PhotoImage(Image.open('plots/plot.png').resize((1520,880)))
+    except:
+        my_img=ImageTk.PhotoImage(Image.open('plot.png').resize((1520,880)))
     my_label = tk.Label(image=my_img)
     my_label.place(relx=0.1,y=50)
 root = tk.Tk()

@@ -11,6 +11,8 @@ import time as tm
 import random as rnd
 
 global results
+global start
+start=0
 results = {}
 #decorator that calculates execution time of function in miliseconds
 def time(x):
@@ -128,7 +130,7 @@ def bogosort(arr):
 def sorts():
     x=list(results.keys())
     y=list(results.values())
-    plt.figure(dpi=1200)
+    plt.figure(dpi=600)
     plt.style.use('seaborn-darkgrid')
     plt.ylabel("time in microseconds")
     plt.fill_between(x,y,color="skyblue",alpha=0.4)

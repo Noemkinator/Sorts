@@ -26,7 +26,10 @@ def plotdata():
     
 root = tk.Tk()
 root.title("Sorting Algorithms")
-root.iconbitmap('src/icon.ico')
+try:
+    root.iconbitmap('src/icon.ico')
+except:
+    pass
 plot_button = tk.Button(root, command= plotdata, 
                         height = 2,
                         width = 20,

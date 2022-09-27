@@ -4,8 +4,8 @@ Created on Tue Aug  9 08:05:52 2022
 
 @author: xzajic22
 """
-
 import matplotlib.pyplot as plt
+from matplotlib.ticker import (AutoMinorLocator, MultipleLocator)
 from functools import wraps
 import time as tm
 import random as rnd
@@ -158,11 +158,12 @@ def sorts():
     x=list(results.keys())
     y=list(results.values())
     plt.figure(dpi=600)
-    plt.style.use('seaborn-darkgrid')
+    plt.style.use('dark_background')
     plt.ylabel("time in microseconds")
     plt.fill_between(x,y,color="skyblue",alpha=0.4)
     plt.plot(x,y,color="lime",alpha=0.2)
     plt.plot(x,y,"go")
+    plt.grid(visible = True, which = 'major',axis = 'both')
     try:
         plt.savefig('plots/plot.png')
     except:
